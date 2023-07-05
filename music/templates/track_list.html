@@ -1,0 +1,55 @@
+{% extends 'layout.html' %} {% block content %}
+<main id="main">
+<nav style="clear:both">
+            <div style="float:left">
+                {% if first_page is not none %}
+                    <button class="btn-general" onclick="location.href='{{first_page}}'">First</button>
+                {% else %}
+                    <button class="btn-general-disabled" disabled>First</button>
+                {% endif %}
+                {% if prev_page is not none %}
+                    <button class="btn-general" onclick="location.href='{{prev_page}}'">Previous</button>
+                {% else %}
+                    <button class="btn-general-disabled" disabled>Previous</button>
+                {% endif %}
+            </div>
+            <div style="float:right">
+                {% if next_page is not none %}
+                    <button class="btn-general" onclick="location.href='{{next_page}}'">Next</button>
+                {% else %}
+                    <button class="btn-general-disabled" disabled>Next</button>
+                {% endif %}
+                {% if last_page is not none %}
+                    <button class="btn-general" onclick="location.href='{{last_page}}'">Last</button>
+                {% else %}
+                    <button class="btn-general-disabled" disabled>Last</button>
+                {% endif %}
+            </div>
+        </nav>
+
+<div>
+  <table>
+    <tr>
+      <th>Id</th>
+      <th>Track</th>
+      <th>Artist</th>
+      <th>Album</th>
+    </tr>
+    {% for track in tracks %}
+    <tr>
+      <td>{{ track.track_id }}</td>
+      <td>{{ track.title }}</td>
+      <td>{{ track.artist.full_name }}</td>
+      <td>{{ track.album.title }}</td>
+      <td>
+        <a
+          href={{ url_for('track_blueprint.track_view', track_name = track.title) }}
+          >View</a
+        >
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+</main>
+{% endblock %}

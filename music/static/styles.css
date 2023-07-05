@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  color: black;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+h1 {
+    text-align: center;
+    font-weight: bold;
+}
+
+.btn-nav {
+  padding: 10px;
+  border-bottom: 1px solid #bdb8d7;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  color: #ead1dc;
+  display: block;
+}
+
+.btn-nav:hover {
+  background-color: #d5a6bd;
+  color: #fff;
+}
+
+.btn-general {
+    background-color: #741b47;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+    float:left;
+}
+
+.btn-general-disabled {
+    background-color: #4c1130;
+    color: #4c1130;
+    border: none;
+    border-radius: 8px;
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+    float:left;
+    #opacity: 0.6;
+}
+
+.btn-general:hover {
+    background-color: #f4ebcc;
+    color: #741b47;
+}
+
+.textarea {
+    width: 100%;
+    overflow: auto;
+    word-break: break-all;
+}
+
+#body {
+  min-height: 100%;
+  margin-bottom: -60px;
+  font-size: medium;
+}
+
+#header {
+  padding: 20px;
+  background: #f4cccc;
+  font-size: 64px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#content-2 {
+  height: 100vh;
+  margin-left: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+}
+
+#nav {
+  width: 200px;
+  height: 100%;
+  background: #741b47;
+  padding: 30px 0px;
+  position: fixed;
+}
+
+#main {
+  margin: 0px;
+  color: #717171;
+  background: #f4cccc;
+  line-height: 25px;
+  padding: 10px;
+  width: 100%;
+  height: 900px;
+}
+
+input[type='text'],
+    select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+input[type='password'],
+    select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+input[type='submit'] {
+    width: 100%;
+     background-color: #741b47;
+     color: white;
+     padding: 14px 20px;
+     margin: 8px 0;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+}
+
+input[type='submit']:hover {
+    background-color: #f4ebcc;
+    color: #741b47;
+}
+
+.icon {
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: -0.5em;
+    fill: currentColor;
+    overflow: hidden;
+}

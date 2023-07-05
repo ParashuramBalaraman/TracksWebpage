@@ -1,0 +1,14 @@
+<nav id="nav">
+    <a class="btn-nav" href="{{ url_for('track_blueprint.home') }}">Home</a>
+    <a class="btn-nav" href="{{ url_for('track_blueprint.list_of_tracks') }}">Tracks</a>
+    <a class="btn-nav" href="{{ url_for('album_blueprint.list_of_albums') }}">Albums</a>
+    <a class="btn-nav" href="{{ url_for('artist_blueprint.list_of_artists') }}">Artists</a>
+    <a class="btn-nav" href="{{ url_for('genre_blueprint.list_of_genres') }}">Genres</a>
+    <a class="btn-nav" href="{{ url_for('authentication_bp.register') }}">Register</a>
+    <a class="btn-nav" href="{{ url_for('authentication_bp.login') }}">Login</a>
+    <a class="btn-nav" href="{{ url_for('authentication_bp.logout') }}">Logout</a>
+    <a class="btn-nav" href="{{ url_for('track_blueprint.find_track') }}">Search Track</a>
+    <a class="btn-nav" href="{{ url_for('album_blueprint.find_album') }}">Search Album</a>
+    <a class="btn-nav" href="{{ url_for('artist_blueprint.find_artist') }}">Search Artist</a>
+    <a class="btn-nav" href="{{ url_for('genre_blueprint.find_genre') }}">Search Genre</a>
+</nav>

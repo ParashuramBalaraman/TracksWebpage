@@ -1,0 +1,29 @@
+{% extends 'layout.html' %} {% block content %}
+
+<main id="main">
+<div>
+  <table>
+    <tr>
+      <th>Id</th>
+      <th>Track</th>
+      <th>Album</th>
+      <th>Track_URL</th>
+    </tr>
+    {% for track in artists %}
+    <tr>
+      <td>{{ track.track_id }}</td>
+      <td>{{ track.title }}</td>
+      <td>{{ track.album.title }}</td>
+      <td>{{ track.track_url }}</td>
+      <td>
+        <a
+          href={{ url_for('track_blueprint.track_view', track_id = track.track_id, track_name = track.title) }}
+          >View</a
+        >
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+</main>
+{% endblock %}
